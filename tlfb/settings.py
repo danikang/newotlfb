@@ -66,7 +66,7 @@ MIDDLEWARE = [
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600,
-                                              default='postgres://localhost:5434/{}'.format(APP_NAME))
+                                              default='postgres://localhost:5433/{}'.format(APP_NAME))
 
 SESSION_EXPIRE_SECONDS = 5400
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
