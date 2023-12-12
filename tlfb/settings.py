@@ -65,7 +65,8 @@ MIDDLEWARE = [
 # DATABASES AND CACHING
 
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+DATABASES['default'] = dj_database_url.config(conn_max_age=600,
+                                              default='postgres://localhost:5434/{}'.format(APP_NAME))
 
 SESSION_EXPIRE_SECONDS = 5400
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
